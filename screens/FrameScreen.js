@@ -1,16 +1,10 @@
 import * as React from "react";
-import { Pressable, StyleSheet, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { StyleSheet, View } from "react-native";
 
 const FrameScreen = () => {
-  const navigation = useNavigation();
-
   return (
     <View style={styles.rectangleParent}>
-      <Pressable
-        style={[styles.frameChild, styles.frameBg]}
-        onPress={() => navigation.navigate("Frame4")}
-      />
+      <View style={[styles.frameChild, styles.frameBg]} />
       <View style={[styles.frameItem, styles.frameBg]} />
       <View style={[styles.frameInner, styles.frameBg]} />
     </View>
@@ -23,28 +17,28 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   frameChild: {
-    top: 69,
-    left: 73,
-    width: 263,
-    height: 119,
+    top: 52,
+    left: 52,
+    width: 108,
+    height: 53,
   },
   frameItem: {
-    top: 286,
-    left: 43,
-    width: 267,
-    height: 195,
+    top: 182,
+    left: 68,
+    width: 112,
+    height: 97,
   },
   frameInner: {
-    top: 558,
-    left: 156,
-    width: 169,
-    height: 129,
+    top: 337,
+    left: 89,
+    width: 71,
+    height: 44,
   },
   rectangleParent: {
     backgroundColor: "#fff",
     flex: 1,
     width: "100%",
-    height: 731,
+    height: 503,
     overflow: "hidden",
   },
 });
